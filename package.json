@@ -1,17 +1,23 @@
 {
-  "name": "SvelteComponent",
+  "name": "@adibite/svelte-slideit",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
+  "license": "MIT",
   "scripts": {
     "build": "rollup -c",
+    "dev": "NODE_ENV=development rollup -cw",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
+    "@gen/rollup-plugin-generate-html": "^0.1.1",
+    "@rollup/plugin-commonjs": "^11.1.0",
     "@rollup/plugin-node-resolve": "^6.0.0",
     "rollup": "^1.20.0",
+    "rollup-plugin-serve": "^1.0.1",
     "rollup-plugin-svelte": "^5.0.0",
-    "svelte": "^3.0.0"
+    "svelte": "^3.0.0",
+    "svelte-preprocess": "^3.7.4"
   },
   "keywords": [
     "svelte"
