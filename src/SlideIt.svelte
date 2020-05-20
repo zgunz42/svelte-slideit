@@ -31,6 +31,7 @@
 
       return {
           update(options) {
+              glide.update(options);
               if (glide.disabled) {
                 glide.enable()
               }

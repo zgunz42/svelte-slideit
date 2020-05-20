@@ -6,7 +6,12 @@
     }
 </script>
 <style src="../node_modules/@glidejs/glide/dist/css/glide.theme.css"></style>
-<SlideIt items={[1,2,3]}>
+<SlideIt
+        options={{
+                startAt: 0,
+                perView: 3
+                }}
+        items={[1,2,3,4,5,6,7]}>
     <div slot="item" let:item>
         <p>{item}</p>
     </div>
