@@ -36,7 +36,7 @@
           },
 
           destroy() {
-              // glide.disable()
+              glide.disable()
           }
       }
     }
