@@ -1,10 +1,10 @@
 {
-  "name": "@adibite/svelte-slideit",
+  "name": "@zgunz42/svelte-slideit",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
   "license": "MIT",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "scripts": {
     "build": "rollup -c",
     "dev": "NODE_ENV=development rollup -cw",
@@ -21,7 +21,8 @@
     "svelte-preprocess": "^3.7.4"
   },
   "keywords": [
-    "svelte"
+    "svelte",
+    "glidejs"
   ],
   "files": [
     "src",
