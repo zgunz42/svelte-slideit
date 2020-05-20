@@ -10,7 +10,7 @@
     export let options={};
     export let bullet=false;
     export let control=false;
-    function glide(node, options) {
+    function initGlide(node, options) {
       const events = [
               'mount.before', 'run', 'mount.after', 'update', 'play', 'pause',
               'build.before', 'build.after', 'run.before', 'run.after',
@@ -22,6 +22,7 @@
       // forward glide event
       events.forEach(function (event) {
           glide.on(event, function(args) {
+              // Replace event name from a.b to aB or keep source
               dispatch(event.replace(/\.\w/, (v) => v[1].toUpperCase()), args)
           });
       });
@@ -41,7 +42,7 @@
       }
     }
 </script>
-<div use:glide={options} class="glide">
+<div use:initGlide={options} class="glide">
   <div class="glide__track" data-glide-el="track">
       <ul class="glide__slides">
         {#each items as item}
