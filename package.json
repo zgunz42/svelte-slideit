@@ -1,5 +1,12 @@
 {
   "name": "svelte-slideit",
+  "description": "Lightweight and simple slider or carousel with no dependencies for svelte",
+  "repository": "zgunz42/svelte-slideit",
+  "author": "adi gunawan <adi_gunawan@live.com> (https://adibite.xyz/)",
+  "bugs": {
+    "url": "https://github.com/zgunz42/svelte-slideit/issues"
+  },
+  "homepage": "https://github.com/zgunz42/svelte-slideit",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
