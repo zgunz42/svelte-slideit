@@ -70,7 +70,7 @@
   {#if bullet && glide }
     <div class="glide__bullets">
       {#each items as item, index}
-          <slot name="bullet" props={() => bulletIn(index, glide)}}>
+          <slot name="bullet" prop={bulletIn(index, glide)}>
               <button class:focus={bulletIn(index, glide).isActive}
                       class="glide__bullet"
                       on:click={() => bulletIn(index, glide).focus()}
