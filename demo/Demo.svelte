@@ -18,8 +18,8 @@
 </SlideIt>
 
 <SlideIt on:run={warn} items={[4,5,6]} bullet={true}>
-    <div slot="item" let:item>
-        <p>{item}</p>
+    <div slot="item" let:item let:index>
+        <p>{item}: {index}</p>
     </div>
 </SlideIt>
 

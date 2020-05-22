@@ -54,7 +54,7 @@
       <ul class="glide__slides">
         {#each items as item, index}
             <li class="glide__slide">
-                <slot name="item" {item}>{JSON.stringify(item)}</slot>
+                <slot name="item" {item} {glide} {index}>{index}</slot>
             </li>
         {/each}
       </ul>
