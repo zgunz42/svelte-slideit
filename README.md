@@ -1,35 +1,45 @@
-*Psst — looking for an app template? Go here --> [sveltejs/template](https://github.com/sveltejs/template)*
+## Svelte SlideIt
 
----
+![npm-publish](https://github.com/zgunz42/svelte-slideit/workflows/npm-publish/badge.svg) [![svelte-v2](https://img.shields.io/badge/svelte-v2-orange.svg)](https://v2.svelte.dev) [![svelte-v3](https://img.shields.io/badge/svelte-v3-blueviolet.svg)](https://svelte.dev)
 
-# component-template
+### Hello SlideIt
 
-A base for building shareable Svelte components. Clone it with [degit](https://github.com/Rich-Harris/degit):
+SlideIt is a slider and carousel build on top of [Glidejs](https://glidejs.com/). I build this because other
+svelte component like *[svelte-carousel](https://github.com/beyonk-adventures/svelte-carousel/blob/master/README.md)* 
+did not support responsive because can't handle it [Siema](https://github.com/pawelgrzybek/siema). Other reason i need
+carousel API like owlcarousel but use vanilla js for less depedency.
 
-```bash
-npx degit sveltejs/component-template my-new-component
-cd my-new-component
-npm install # or yarn
+Core feature:
+
+- [x] Responsive config options
+- [x] Port all glidejs event to svelte custom event
+- [x] Many slot that can you fill with "any html tag"
+- [x] Glidejs css imported in style tag thank to **svelte-preprocess**
+
+## Event Name
+
+All event name from Glidejs has been rename `a.b` into `aB`, so if want to listen
+into some event like this.
+
+```sveltehtml
+<SlideIt on:montBefore={handler} />
+``` 
+It will listen into `mount.before` of Glidejs event name
+
+## Render Carousel Item
+
+```sveltehtml
+<SlideIt items={[4,5,6]}>
+    <div slot="item" let:item>
+        <p>{item}</p>
+    </div>
+</SlideIt>
 ```
 
-Your component's source code lives in `src/Component.svelte`.
+## Render Control and Bullet
 
-You can create a package that exports multiple components by adding them to the `src` directory and editing `src/index.js` to reexport them as named exports.
+_TODO_
 
-TODO
+## Same Config as Glide js
 
-* [ ] some firm opinions about the best way to test components
-* [ ] update `degit` so that it automates some of the setup work
-
-
-## Setting up
-
-* Run `npm init` (or `yarn init`)
-* Replace this README with your own
-
-
-## Consuming components
-
-Your package.json has a `"svelte"` field pointing to `src/index.js`, which allows Svelte apps to import the source code directly, if they are using a bundler plugin like [rollup-plugin-svelte](https://github.com/sveltejs/rollup-plugin-svelte) or [svelte-loader](https://github.com/sveltejs/svelte-loader) (where [`resolve.mainFields`](https://webpack.js.org/configuration/resolve/#resolve-mainfields) in your webpack config includes `"svelte"`). **This is recommended.**
-
-For everyone else, `npm run build` will bundle your component's source code into a plain JavaScript module (`dist/index.mjs`) and a UMD script (`dist/index.js`). This will happen automatically when you publish your component to npm, courtesy of the `prepublishOnly` hook in package.json.
+See glidejs documentation https://glidejs.com/docs/options/
