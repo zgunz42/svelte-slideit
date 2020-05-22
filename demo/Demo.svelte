@@ -27,4 +27,8 @@
     <div slot="item" let:item>
         <p>{item}</p>
     </div>
+    <div slot="control" let:glide>
+        <button on:click={() => glide.go('>')}>Back</button>
+        <button on:click={() => glide.go('<')}>Forward</button>
+    </div>
 </SlideIt>
