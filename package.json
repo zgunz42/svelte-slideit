@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@gen/rollup-plugin-generate-html": "0.1.1",
-    "@rollup/plugin-commonjs": "11.1.0",
+    "@rollup/plugin-commonjs": "21.0.2",
     "@rollup/plugin-node-resolve": "6.1.0",
     "rollup": "1.32.1",
     "rollup-plugin-serve": "1.0.1",
